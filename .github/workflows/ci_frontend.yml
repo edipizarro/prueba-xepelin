@@ -1,0 +1,27 @@
+name: Continuous Implementation
+
+on:
+  push:
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 'mvp'
+    steps:
+      uses: actions/checkout@v3
+      uses: actions/setup-node@v3
+      with:
+        node-version: 17
+        cache: 'npm'
+      run: npm install
+      run: npm run build
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    - name: Deploy static site to S3 bucket
+      run: aws s3 sync ./mvp/dist/ s3://prueba-xepelin --delete
