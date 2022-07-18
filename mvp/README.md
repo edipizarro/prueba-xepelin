@@ -13,7 +13,7 @@ Solution to MVP problem
 |         | Tech       | Framework  | Source code                   |
 | ------- | ---------- | ---------- | ----------------------------- |
 | Front   | Typescript | Vue3 + Vite | `~/src`                       |
-| Back    | GSheets    | -          | [GSheet](https://docs.google.com/spreadsheets/d/1hGTZ6BgJd9lTCUEqDv-8LOvZ9nVuZTnCoCxYncTl74Y/edit?usp=sharing) |
+| Back    | GSheets    | -          | [GSheet](https://docs.google.com/spreadsheets/d/1hGTZ6BgJd9lTCUEqDv-8LOvZ9nVuZTnCoCxYncTl74Y/edit?usp=sharing) [AppScripts](https://script.google.com/home/projects/1dMbGdRbXWKtOLKl397-LX_JNLQfmLd0jGbsgTey9z_RXeWX48FvILv0h/edit)|
 
 ## Project Setup
 
