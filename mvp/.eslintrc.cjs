@@ -9,4 +9,8 @@ module.exports = {
     "@vue/eslint-config-typescript/recommended",
     "@vue/eslint-config-prettier",
   ],
+  rules: {
+    "@typescript-eslint/no-explicit-any": "off",
+    "vue/no-mutating-props": "off",
+  },
 };

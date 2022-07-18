@@ -12,10 +12,13 @@ Solution to MVP problem
 
 |         | Tech       | Framework  | Source code                   |
 | ------- | ---------- | ---------- | ----------------------------- |
-| Front   | Typescript | Vue + Vite | `~/src`                       |
-| Back    | -          | GSheets    | -                             |
+| Front   | Typescript | Vue3 + Vite | `~/src`                       |
+| Back    | GSheets    | -          | [GSheet](https://docs.google.com/spreadsheets/d/1hGTZ6BgJd9lTCUEqDv-8LOvZ9nVuZTnCoCxYncTl74Y/edit?usp=sharing) |
 
 ## Project Setup
+
+
+Node version: 17+
 
 ```sh
 npm install
@@ -40,9 +43,22 @@ npm run lint
 ```
 
 ## CI/CD
+
 1. Github Actions
-  Implementation using Github Actions.
-  It checks types, builds and deploys to AWS S3.
+    - Implementation uses Github Actions and deploys to AWS S3.
 
 ## Misc
   No env variables are used
+
+## Short explanation
+  The frontend implements two views
+  
+    1. Login view
+        - Simulates a Fake login, loading a fake value to `JWT` cookie.
+        - This was done because there is no data than can be hidden 
+        (and requested) in a backend server, so this implementation
+        still demonstrates correctly how the app works.
+    2. Rates view
+        - If there is an user logged in, it shows an embedded Gsheet.
+        
+  The GSheet does what was requested.
